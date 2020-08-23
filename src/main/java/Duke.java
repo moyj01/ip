@@ -58,6 +58,7 @@ public class Duke {
                                         System.out.println(item.toString());
                                         System.out.format("Now you have %d tasks in the list\n", ls.size());
                                         ArrayListToTextConverter.convertArrayListToText(ls);
+
                                     }
                                 }
 
@@ -75,6 +76,7 @@ public class Duke {
                                     System.out.println(todo.toString());
                                     System.out.format("Now you have %d tasks in the list\n", ls.size());
                                     ArrayListToTextConverter.convertArrayListToText(ls);
+
                                     break;
                                 }
 
@@ -89,6 +91,7 @@ public class Duke {
                                 System.out.println(deadline.toString());
                                 System.out.format("Now you have %d tasks in the list\n", ls.size());
                                 ArrayListToTextConverter.convertArrayListToText(ls);
+
                                 break;
 
                             case "event":
@@ -101,7 +104,9 @@ public class Duke {
                                 System.out.println("Got it. I've added this task:");
                                 System.out.println(event.toString());
                                 System.out.format("Now you have %d tasks in the list\n", ls.size());
+
                                 ArrayListToTextConverter.convertArrayListToText(ls);
+
                                 break;
 
                             default:
@@ -111,8 +116,12 @@ public class Duke {
                 }
             } catch (DukeException exception) {
                 System.out.println(exception.getMessage());
-            }
+            } catch (Exception exception) {
+                System.out.println(exception.getMessage());
 
+
+
+            }
         }
     }
 
